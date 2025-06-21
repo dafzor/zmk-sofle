@@ -79,11 +79,11 @@
         // flipped qwerty (left side has right side keys)
         game {
             bindings = <
-&to COLEMAKDH  &trans  &trans  &trans  &trans  &trans  &kp UP_ARROW     &kp ESC    &kp N1     &kp N2     &kp N3           &kp N4      &kp N5
-&to QWERTY     &trans  &trans  &trans  &trans  &trans  &kp DOWN_ARROW   &kp TAB    &kp Q      &kp W      &kp E            &kp R       &kp T
-&trans         &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW   &kp LCTRL  &kp A      &kp S      &kp D            &kp F       &kp G
-&trans         &trans  &trans  &trans  &trans  &trans  &kp RIGHT_ARROW  &kp LSHFT  &kp Z      &kp X      &kp C            &kp V       &kp B
-&trans         &trans  &trans  &trans  &trans  &trans  &kp ENTER        &kp ENTER  &kp SPACE  &kb LCTRL  &kp RIGHT_SHIFT  &kp M
+&to COLEMAKDH  &trans  &trans  &trans  &trans  &trans  &kp UP_ARROW     &kp ESC    &kp N1     &kp N2     &kp N3      &kp N4      &kp N5
+&to QWERTY     &trans  &trans  &trans  &trans  &trans  &kp DOWN_ARROW   &kp TAB    &kp Q      &kp W      &kp E       &kp R       &kp T
+&trans         &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW   &kp LCTRL  &kp A      &kp S      &kp D       &kp F       &kp G
+&trans         &trans  &trans  &trans  &trans  &trans  &kp RIGHT_ARROW  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V       &kp B
+&trans         &trans  &trans  &trans  &trans  &trans  &kp ENTER        &kp ENTER  &kp SPACE  &kp LCTRL  &kp RSHIFT  &kp M
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
