@@ -53,11 +53,11 @@
         // regular colemak-dh layout with homerow mods (default)
         colemakdh {
             bindings = <
-&kp TILDE   &kp N1     &kp N2    &kp N3    &kp N4     &kp N5    &kp UP      &kp N6         &kp N7     &kp N8     &kp N9     &kp N0      &kp BSPC
-&kp TAB     &kp Q      &kp W     &kp F     &kp P      &kp B     &kp DOWN    &kp J          &kp L      &kp U      &kp Y      &kp APOS    &kp BSLH
-&kp LCTRL   &kp A      &kp R     &kp S     &kp T      &kp G     &kp LEFT    &kp M          &kp N      &kp E      &kp I      &kp O       &kp APOS
-&kp LSHFT   &kp Z      &kp X     &kp C     &kp D      &kp V     &kp RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT    &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &kp ENTER  &mo NAV   &kp ENTER   &lt SYMB BSPC  &kp SPACE  &mo ALT    &kp RCTRL  &kp DELETE
+&kp TILDE   &kp N1     &kp N2    &kp N3    &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7     &kp N8     &kp N9   &kp N0      &kp BSPC
+&kp TAB     &kp Q      &kp W     &kp F     &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L      &kp U      &kp Y    &kp APOS    &kp BSLH
+&kp LCTRL   &kp A      &kp R     &kp S     &kp T             &kp G     &mmv MOVE_LEFT    &kp M          &kp N      &kp E      &kp I    &kp O       &kp APOS
+&kp LSHFT   &kp Z      &kp X     &kp C     &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH    &kp ENTER
+&kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE  &mo ALT    &kp ESC  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -95,11 +95,11 @@
         // numpad
         num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp KP_NLCK  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp KP_N7    &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp KP_N4    &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp KP_N1    &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp KP_N0    &kp KP_N0     &kp KP_DOT       &kp KP_ENTER
+&to COLEMAKDH  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp KP_NLCK  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
+&to QWERTY     &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp KP_N7    &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp KP_N4    &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp KP_N1    &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &kp BSPC &kp KP_N0    &kp KP_N0     &kp KP_DOT       &kp KP_ENTER
             >;
 
             display-name = "num";
@@ -110,9 +110,9 @@
         nav {
             bindings = <
 &kp F12  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5      &kp C_PLAY   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10   &kp F11
-&trans   &kp ESC    &trans     &trans     &kp K_APP  &kp PSCRN   &kp C_STOP   &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DEL   &kp F12
-&trans   &kp LALT   &kp LGUI   &kp LSHFT  &kp LCTRL  &trans      &kp C_NEXT   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BSPC  &kp K_APP
-&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &kp C_PREV   &trans     &trans    &trans    &trans     &trans    &trans
+&trans   &kp ESC    &trans     &kp K_APP  &kp K_APP  &kp PSCRN   &kp C_STOP   &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DEL   &kp F12
+&trans   &kp LALT   &kp LGUI   &kp LSHFT  &kp LCTRL  &kp BSPC    &kp C_PREV   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp BSPC  &kp K_APP
+&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp TAB     &kp C_NEXT   &kp ENTER  &trans    &trans    &trans     &trans    &trans
 &trans   &trans     &trans     &trans     &trans     &trans      &kp C_PP     &trans     &trans    &kp TAB   &trans     &trans
             >;
 
@@ -123,11 +123,11 @@
         // special symbols
         symb {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans  &trans  &trans    &trans      &trans        &trans    &mmv MOVE_UP      &kp EQUAL   &kp TILDE     &kp LS(SEMI)  &kp SEMI  &kp LS(EQUAL)  &trans
+&trans  &trans  &kp LBKT  &kp LS(N9)  &kp LS(LBKT)  &trans    &mmv MOVE_DOWN    &kp LS(N8)  &kp LS(RBKT)  &kp LS(N0)    &kp RBKT    &trans         &trans
+&trans  &trans  &trans    &trans      &trans        &trans    &mmv MOVE_LEFT    &trans      &trans        &trans        &trans    &trans         &trans
+&trans  &trans  &trans    &trans      &trans        &trans    &mmv MOVE_RIGHT   &trans      &trans        &trans        &trans    &trans         &trans
+&trans  &trans  &trans    &trans      &trans        &trans    &mkp LCLK         &trans      &trans        &trans        &trans    &trans
             >;
 
             display-name = "symb";
