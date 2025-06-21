@@ -51,11 +51,11 @@
         // regular colemak-dh layout with homerow mods (default)
         colemakdh {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4     &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp F         &kp P      &kp B        &kp DOWN_ARROW   &kp J      &kp L      &kp U      &kp Y            &kp APOS    &kp BSLH
-&kp LCTRL   &kp A      &kp R         &kp S         &kp T      &kp G        &kp LEFT_ARROW   &kp M      &kp N      &kp E      &kp I            &kp O       &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp D      &kp V        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &kp ENTER  &mo NAV      &kp ENTER        &mo SYMB   &kp SPACE  &mo ALT    &kp RIGHT_CTRL   &kp DELETE
+&kp ESC     &kp N1          &kp N2          &kp N3        &kp N4           &kp N5       &kp UP_ARROW     &kp N6               &kp N7       &kp N8       &kp N9          &kp N0          &kp BACKSPACE
+&kp TAB     &kp Q           &kp W           &kp F         &kp P            &kp B        &kp DOWN_ARROW   &kp J                &kp L        &kp U        &kp Y           &kp APOS        &kp BSLH
+&kp LCTRL   &mt LEFT_ALT A  &mt LEFT_GUI R  &mt LSHFT S   &mt LCTSL T      &kp G        &kp LEFT_ARROW   &kp M                &mt LCTRL N  &mt LSHFT E  &mt LEFT_GUI I  &mt LEFT_ALT O  &kp APOS
+&kp LSHFT   &kp Z           &kp X           &kp C         &kp D            &kp V        &kp RIGHT_ARROW  &kp N                &kp M        &kp COMMA    &kp DOT         &kp FSLH        &kp ENTER
+&kp C_MUTE  &kp LCTRL       &kp LEFT_GUI    &kp LEFT_ALT  &mt LSHFT ENTER  &mo NAV      &kp ENTER        &lt BACKSPACE SYMB   &kp SPACE    &mo ALT      &kp RIGHT_CTRL  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
