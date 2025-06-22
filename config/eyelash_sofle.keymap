@@ -61,6 +61,15 @@
         hold-trigger-on-release;
     };
 
+    // have combo layer
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV SYMB>;
+            then-layer = <NUM>;
+        };
+    };
+
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -116,11 +125,11 @@
         // numpad layer for easy number
         num {
             bindings = <
-            &trans         &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_NLCK  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
-            &to COLEMAKDH  &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_N7    &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &trans
-            &to QWERTY     &kp LALT  &kp LGUI  &kp LSHFT  &kp LCTRL  &trans    &trans   &trans   &kp KP_N4    &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &trans
-            &to GAME       &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_N1    &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &trans
-            &trans         &trans    &trans    &trans     &trans     &trans    &trans   &kp BSPC &kp KP_N0    &kp KP_N0     &kp KP_DOT       &kp KP_ENTER
+            &trans         &trans    &trans    &trans     &trans     &trans    &trans   &trans  &kp KP_NLCK  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
+            &to COLEMAKDH  &trans    &trans    &trans     &trans     &trans    &trans   &trans  &kp KP_N7    &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &trans
+            &to QWERTY     &kp LALT  &kp LGUI  &kp LSHFT  &kp LCTRL  &trans    &trans   &trans  &kp KP_N4    &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &trans
+            &to GAME       &trans    &trans    &trans     &trans     &trans    &trans   &trans  &kp KP_N1    &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &trans
+            &trans         &trans    &trans    &trans     &trans     &trans    &trans   &trans  &kp BSPC     &kp KP_N0     &kp KP_N0        &kp KP_DOT
             >;
 
             display-name = "num";
