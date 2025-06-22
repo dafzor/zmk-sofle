@@ -8,7 +8,7 @@
 #define NUM       3
 #define NAV       4
 #define SYMB      5
-#define ALT       6
+#define FUNC      6
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -57,7 +57,7 @@
             &kp TAB     &kp Q      &kp W     &kp F     &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L      &kp U      &kp Y         &kp APOS    &kp EQUAL
             &kp LCTRL   &kp A      &kp R     &kp S     &kp T             &kp G     &mmv MOVE_LEFT    &kp M          &kp N      &kp E      &kp I         &kp O       &kp SEMI
             &kp LSHFT   &kp Z      &kp X     &kp C     &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH    &kp ENTER
-            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE  &mo ALT    &mt RALT ESC  &kp DEL
+            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE  &mo FUNC   &mt RALT ESC  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -71,7 +71,7 @@
             &kp TAB     &kp Q      &kp W     &kp E     &kp R      &kp T     &kp DOWN    &kp Y      &kp U      &kp I      &kp O      &kp P       &kp BSLH
             &kp LCTRL   &kp A      &kp S     &kp D     &kp F      &kp G     &kp LEFT    &kp H      &kp J      &kp K      &kp L      &kp SEMI    &kp APOS
             &kp LSHFT   &kp Z      &kp X     &kp C     &kp V      &kp B     &kp RIGHT   &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH    &kp ENTER
-            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &kp ENTER  &mo NAV   &kp ENTER   &mo SYMB   &kp SPACE  &mo ALT    &kp RCTRL  &kp DELETE
+            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &kp ENTER  &mo NAV   &kp ENTER   &mo SYMB   &kp SPACE  &mo FUNC   &kp RCTRL  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -81,10 +81,10 @@
         // flipped qwerty (left side has right side keys)
         game {
             bindings = <
-            &to COLEMAKDH  &trans  &trans  &trans  &trans  &trans  &kp UP     &kp ESC    &kp N1     &kp N2     &kp N3      &kp N4      &kp N5
-            &to QWERTY     &trans  &trans  &trans  &trans  &trans  &kp DOWN   &kp TAB    &kp Q      &kp W      &kp E       &kp R       &kp T
-            &trans         &trans  &trans  &trans  &trans  &trans  &kp LEFT   &kp LCTRL  &kp A      &kp S      &kp D       &kp F       &kp G
-            &trans         &trans  &trans  &trans  &trans  &trans  &kp RIGHT  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V       &kp B
+            &trans         &trans  &trans  &trans  &trans  &trans  &kp UP     &kp ESC    &kp N1     &kp N2     &kp N3      &kp N4      &kp N5
+            &to COLEMAKDH  &trans  &trans  &trans  &trans  &trans  &kp DOWN   &kp TAB    &kp Q      &kp W      &kp E       &kp R       &kp T
+            &to QWERTY     &trans  &trans  &trans  &trans  &trans  &kp LEFT   &kp LCTRL  &kp A      &kp S      &kp D       &kp F       &kp G
+            &to GAME       &trans  &trans  &trans  &trans  &trans  &kp RIGHT  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V       &kp B
             &trans         &trans  &trans  &trans  &trans  &trans  &kp ENTER  &kp ENTER  &kp SPACE  &kp LCTRL  &kp RSHIFT  &kp M
             >;
 
@@ -92,13 +92,13 @@
             display-name = "game";
         };
 
-        // numpad
+        // numpad layer for easy number
         num {
             bindings = <
-            &to COLEMAKDH  &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_NLCK  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
-            &to QWERTY     &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_N7    &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &trans
-            &trans         &kp LALT  &kp LGUI  &kp LSHFT  &kp LCTRL  &trans    &trans   &trans   &kp KP_N4    &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &trans
-            &trans         &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_N1    &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &trans
+            &trans         &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_NLCK  &kp KP_SLASH  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
+            &to COLEMAKDH  &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_N7    &kp KP_N8     &kp KP_N9        &kp KP_PLUS   &trans
+            &to QWERTY     &kp LALT  &kp LGUI  &kp LSHFT  &kp LCTRL  &trans    &trans   &trans   &kp KP_N4    &kp KP_N5     &kp KP_N6        &kp KP_PLUS   &trans
+            &to GAME       &trans    &trans    &trans     &trans     &trans    &trans   &trans   &kp KP_N1    &kp KP_N2     &kp KP_N3        &kp KP_ENTER  &trans
             &trans         &trans    &trans    &trans     &trans     &trans    &trans   &kp BSPC &kp KP_N0    &kp KP_N0     &kp KP_DOT       &kp KP_ENTER
             >;
 
@@ -120,7 +120,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        // special symbols
+        // special symbols and multimedia
         symb {
             bindings = <
             &trans  &trans     &trans     &trans     &trans      &trans      &kp C_PLAY   &trans     &trans     &trans     &trans    &trans     &trans
@@ -134,17 +134,17 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        // special portuguese and other language characters and board functions
-        alt {
+        // board functions and special portuguese (and other language) characters
+        func {
             bindings = <
-            &trans           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &rgb_ug RGB_SPI   &trans  &trans     &trans     &trans     &trans     &trans
-            &trans           &trans        &trans        &kp RA(D)     &trans        &trans         &rgb_ug RGB_SPD   &trans  &kp RA(J)  &kp RA(J)  &kp RA(L)  &trans     &trans
-            &trans           &kp RA(Z)     &kp RA(S)     &kp RA(B)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFR   &trans  &kp RA(F)  &kp RA(D)  &kp RA(K)  &kp RA(L)  &trans
-            &trans           &kp RA(Z)     &trans        &kp RA(C)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFF   &trans  &trans     &trans     &trans     &trans     &trans
-            &rgb_ug RGB_TOG  &trans        &trans        &trans        &trans        &trans         &rgb_ug RGB_TOG   &trans  &trans     &trans     &trans     &trans
+            &soft_off        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &out OUT_TOG   &rgb_ug RGB_SPI   &trans  &trans     &trans     &trans       &trans     &trans
+            &to COLEMAKDH    &trans        &trans        &kp RA(D)       &trans        &trans         &rgb_ug RGB_SPD   &trans  &kp RA(J)  &kp RA(J)  &kp RA(L)    &trans     &trans
+            &to QWERTY       &kp RA(Z)     &kp RA(S)     &kp RA(B)       &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFR   &trans  &kp RA(F)  &kp RA(D)  &kp RA(K)    &kp RA(L)  &trans
+            &to GAME         &kp RA(Z)     &trans        &kp RA(C)       &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFF   &trans  &trans     &trans     &trans       &trans     &trans
+            &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock  &trans        &trans         &rgb_ug RGB_TOG   &trans  &trans     &trans     &bootloader  &sys_reset
             >;
 
-            display-name = "alt";
+            display-name = "func";
             // this needs to be a custom behavior to work
             //sensor-bindings = <&inc_dec_kp RGB_BRI RGB_BRD>;
         };
