@@ -53,7 +53,7 @@
         // regular colemak-dh layout with homerow mods (default)
         colemakdh {
             bindings = <
-            &kp TILDE   &kp N1     &kp N2    &kp N3    &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7     &kp N8     &kp N9        &kp N0      &kp MINUS
+            &gresc      &kp N1     &kp N2    &kp N3    &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7     &kp N8     &kp N9        &kp N0      &kp MINUS
             &kp TAB     &kp Q      &kp W     &kp F     &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L      &kp U      &kp Y         &kp APOS    &kp EQUAL
             &kp LCTRL   &kp A      &kp R     &kp S     &kp T             &kp G     &mmv MOVE_LEFT    &kp M          &kp N      &kp E      &kp I         &kp O       &kp SEMI
             &kp LSHFT   &kp Z      &kp X     &kp C     &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH    &kp ENTER
@@ -138,10 +138,10 @@
         alt {
             bindings = <
             &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &rgb_ug RGB_SPI   &trans  &trans     &trans     &trans     &trans     &trans
-            &trans       &trans        &trans        &trans        &trans        &trans         &rgb_ug RGB_SPD   &trans  &trans     &kp RA(J)     &trans     &trans     &trans
+            &trans       &trans        &trans        &kp RA(D)     &trans        &trans         &rgb_ug RGB_SPD   &trans  &kp RA(J)  &kp RA(J)  &kp RA(L)  &trans     &trans
             &trans       &kp RA(Z)     &kp RA(S)     &kp RA(B)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFR   &trans  &kp RA(F)  &kp RA(D)  &kp RA(K)  &kp RA(L)  &trans
-            &trans       &kp RA(Z)     &trans        &trans        &trans        &trans         &rgb_ug RGB_EFF   &trans  &trans     &trans     &trans     &trans     &trans
-            &kp RGB_TOG  &trans        &trans        &kp RA(C)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_TOG   &trans  &trans     &trans     &trans     &trans
+            &trans       &kp RA(Z)     &trans        &kp RA(C)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFF   &trans  &trans     &trans     &trans     &trans     &trans
+            &kp RGB_TOG  &trans        &trans        &trans        &trans        &trans         &rgb_ug RGB_TOG   &trans  &trans     &trans     &trans     &trans
             >;
 
             display-name = "alt";
