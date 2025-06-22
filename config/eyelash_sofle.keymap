@@ -37,8 +37,29 @@
 
 
 / {
-
     // https://zmk.dev/docs/keymaps/behaviors/hold-tap?examples=home_row_mods
+    hml: home_row_mod_left {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        require-prior-idle-ms = <150>;
+        tapping-term-ms = <280>;
+        quick-tap-ms = <175>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < A R S T >; // List of keys on the right side of the keyboard
+        hold-trigger-on-release;
+    };
+    hmr: home_row_mod_right {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        require-prior-idle-ms = <150>;
+        tapping-term-ms = <280>;
+        quick-tap-ms = <175>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = < N E I O >; // List of keys on the left side of the keyboard
+        hold-trigger-on-release;
+    };
 
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -53,11 +74,11 @@
         // regular colemak-dh layout with homerow mods (default)
         colemakdh {
             bindings = <
-            &gresc      &kp N1     &kp N2    &kp N3    &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7     &kp N8     &kp N9        &kp N0      &kp MINUS
-            &kp TAB     &kp Q      &kp W     &kp F     &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L      &kp U      &kp Y         &kp APOS    &kp EQUAL
-            &kp LCTRL   &kp A      &kp R     &kp S     &kp T             &kp G     &mmv MOVE_LEFT    &kp M          &kp N      &kp E      &kp I         &kp O       &kp SEMI
-            &kp LSHFT   &kp Z      &kp X     &kp C     &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH    &kp ENTER
-            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE  &mo FUNC   &mt RALT ESC  &kp RCTRL
+            &gresc      &kp N1       &kp N2       &kp N3       &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7        &kp N8        &kp N9       &kp N0       &kp MINUS
+            &kp TAB     &kp Q        &kp W        &kp F        &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L         &kp U         &kp Y        &kp APOS     &kp EQUAL
+            &kp LCTRL   &hml LALT A  &hml LGUI R  &hml LSHFT S &hml LCTRL T      &kp G     &mmv MOVE_LEFT    &kp M          &hmr RCTRL N  &hmr RSHFT E  &hmr RGUI I  &hmr LALT O  &kp SEMI
+            &kp LSHFT   &kp Z        &kp X        &kp C        &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M         &kp COMMA     &kp DOT      &kp FSLH     &kp ENTER
+            &kp C_MUTE  &kp LCTRL    &kp LGUI     &kp LALT     &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE     &mo FUNC      &mt RALT ESC &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
