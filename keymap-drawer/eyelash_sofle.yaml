@@ -64,7 +64,7 @@ layers:
   - $$mdi:keyboard-space$$
   - func
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
-  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:apple-keyboard-control$$
   qwerty:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
@@ -122,13 +122,13 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - nav
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - symb
+  - {t: '$$mdi:backspace$$', h: symb}
   - $$mdi:keyboard-space$$
   - func
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:backspace-reverse-outline$$
   game:
   - {t: '$$mdi:transfer$$', type: trans}
