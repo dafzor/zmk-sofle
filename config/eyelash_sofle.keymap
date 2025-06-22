@@ -53,11 +53,11 @@
         // regular colemak-dh layout with homerow mods (default)
         colemakdh {
             bindings = <
-            &kp TILDE   &kp N1     &kp N2    &kp N3    &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7     &kp N8     &kp N9   &kp N0      &kp MINUS
-            &kp TAB     &kp Q      &kp W     &kp F     &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L      &kp U      &kp Y    &kp APOS    &kp EQUAL
-            &kp LCTRL   &kp A      &kp R     &kp S     &kp T             &kp G     &mmv MOVE_LEFT    &kp M          &kp N      &kp E      &kp I    &kp O       &kp SEMI
-            &kp LSHFT   &kp Z      &kp X     &kp C     &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH    &kp ENTER
-            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE  &mo ALT    &kp ESC  &kp DEL
+            &kp TILDE   &kp N1     &kp N2    &kp N3    &kp N4            &kp N5    &mmv MOVE_UP      &kp N6         &kp N7     &kp N8     &kp N9        &kp N0      &kp MINUS
+            &kp TAB     &kp Q      &kp W     &kp F     &kp P             &kp B     &mmv MOVE_DOWN    &kp J          &kp L      &kp U      &kp Y         &kp APOS    &kp EQUAL
+            &kp LCTRL   &kp A      &kp R     &kp S     &kp T             &kp G     &mmv MOVE_LEFT    &kp M          &kp N      &kp E      &kp I         &kp O       &kp SEMI
+            &kp LSHFT   &kp Z      &kp X     &kp C     &kp D             &kp V     &mmv MOVE_RIGHT   &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH    &kp ENTER
+            &kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &mt LSHIFT ENTER  &mo NAV   &mkp LCLK         &lt SYMB BSPC  &kp SPACE  &mo ALT    &mt RALT ESC  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -123,11 +123,11 @@
         // special symbols
         symb {
             bindings = <
-            &trans  &trans     &trans     &trans     &trans      &trans      &kp UP      &trans     &trans     &trans     &trans    &trans     &trans
-            &trans  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR  &kp PRCNT   &kp DOWN    &kp EQUAL  &kp GRAVE  &kp COLON  &kp SEMI  &kp PLUS   &trans
-            &trans  &kp LALT   &kp LGUI   &kp LSHFT  &kp LCTRL   &kp CARET   &kp LEFT    &kp STAR   &kp LBRC   &kp LPAR   &kp LBKT  &kp MINUS  &trans
-            &trans  &kp RA(5)  &kp RA(4)  &kp BSLH   &kp PIPE    &kp AMPS    &kp RIGHT   &kp TILDE  &kp RBRC   &kp RPAR   &kp RBKT  &kp UNDER  &trans
-            &trans  &trans     &trans     &trans     &trans      &trans      &kp ENTER   &trans     &trans     &trans     &trans    &trans
+            &trans  &trans     &trans     &trans     &trans      &trans      &kp C_PLAY   &trans     &trans     &trans     &trans    &trans     &trans
+            &trans  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR  &kp PRCNT   &kp C_STOP   &kp EQUAL  &kp GRAVE  &kp COLON  &kp SEMI  &kp PLUS   &trans
+            &trans  &kp LALT   &kp LGUI   &kp LSHFT  &kp LCTRL   &kp CARET   &kp C_PREV   &kp STAR   &kp LBRC   &kp LPAR   &kp LBKT  &kp MINUS  &trans
+            &trans  &kp RA(5)  &kp RA(4)  &kp BSLH   &kp PIPE    &kp AMPS    &kp C_NEXT   &kp TILDE  &kp RBRC   &kp RPAR   &kp RBKT  &kp UNDER  &trans
+            &trans  &trans     &trans     &trans     &trans      &trans      &kp C_PP     &trans     &trans     &trans     &trans    &trans
             >;
 
             display-name = "symb";
@@ -137,15 +137,15 @@
         // special portuguese and other language characters and board functions
         alt {
             bindings = <
-            &rgb_ug RGB_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp C_PLAY   &trans  &trans  &trans  &trans  &trans  &trans
-            &rgb_ug RGB_OFF  &trans        &trans        &trans        &trans        &trans         &kp C_STOP   &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans   &trans        &trans        &trans        &trans        &trans         &kp C_PREV   &trans  &trans  &trans  &trans  &trans
-            &trans  &trans   &trans        &trans        &trans        &trans        &trans         &kp C_NEXT   &trans  &trans  &trans  &trans  &trans
-            &trans  &trans   &trans        &trans        &trans        &trans        &trans         &kp C_PP     &trans  &trans  &trans  &trans
+            &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &rgb_ug RGB_SPI   &trans  &trans     &trans     &trans     &trans     &trans
+            &trans       &trans        &trans        &trans        &trans        &trans         &rgb_ug RGB_SPD   &trans  &trans     &kp RA(J)     &trans     &trans     &trans
+            &trans       &kp RA(Z)     &kp RA(S)     &kp RA(B)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_EFR   &trans  &kp RA(F)  &kp RA(D)  &kp RA(K)  &kp RA(L)  &trans
+            &trans       &kp RA(Z)     &trans        &trans        &trans        &trans         &rgb_ug RGB_EFF   &trans  &trans     &trans     &trans     &trans     &trans
+            &kp RGB_TOG  &trans        &trans        &kp RA(C)     &kp RA(V)     &kp RA(B)      &rgb_ug RGB_TOG   &trans  &trans     &trans     &trans     &trans
             >;
 
             display-name = "alt";
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp RGB_BRI RGB_BRD>;
         };
     };
 };
