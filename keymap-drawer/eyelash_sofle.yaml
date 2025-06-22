@@ -27,7 +27,7 @@ layers:
   - Y
   - {t: '''', s: '"'}
   - {t: '=', s: +}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: R, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
@@ -61,7 +61,7 @@ layers:
   - nav
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:backspace$$', h: symb}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - func
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:apple-keyboard-control$$
