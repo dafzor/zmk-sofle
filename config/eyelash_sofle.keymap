@@ -92,7 +92,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "colemakdh";
+            display-name = "cmkdh";
         };
 
         // regular qwerty layout for compatibility or guest users
@@ -162,7 +162,7 @@
             >;
 
             display-name = "symb";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         // board functions and special portuguese (and other language) characters
