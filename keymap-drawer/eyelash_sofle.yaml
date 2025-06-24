@@ -47,8 +47,8 @@ layers:
   - D
   - V
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - N
-  - M
+  - K
+  - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
