@@ -62,13 +62,14 @@
     };
 
     // have combo layer
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV SYMB>;
-            then-layer = <NUM>;
-        };
-    };
+    // TODO fix this
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     tri_layer {
+    //         if-layers = <NAV SYMB>;
+    //         then-layer = <NUM>;
+    //     };
+    // };
 
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
