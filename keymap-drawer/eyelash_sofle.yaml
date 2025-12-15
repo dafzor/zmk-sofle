@@ -527,7 +527,7 @@ combos:
 - p: [39, 40]
   k: $$mdi:keyboard-tab$$
   l: [cmkdh]
-- p: [21, 22]
+- p: [22, 23]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [cmkdh]
 - p: [45, 46]
