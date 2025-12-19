@@ -88,34 +88,33 @@
     };
 
     // 12x5 grid https://zmk.dev/docs/config/combos
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <15 16>; // second row WE
-            bindings = <&kp ESC>;
-            layers = <COLEMAKDH>;
-        };
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <39 40>; // forth row XC in orto, ZX on regular
-            bindings = <&kp TAB>;
-            layers = <COLEMAKDH>;
-        };
-        combo_backspace {
-            timeout-ms = <50>;
-            key-positions = <22 23>; // second row IO
-            bindings = <&kp BSPC>;
-            layers = <COLEMAKDH>;
-        };
-        combo_enter {
-            timeout-ms = <50>;
-            key-positions = <45 46>;  // forth row ,.
-            bindings = <&kp ENTER>;
-            layers = <COLEMAKDH>;
-        };
-
-    };
+    // combos {
+    //     compatible = "zmk,combos";
+    //     combo_esc {
+    //         timeout-ms = <50>;
+    //         key-positions = <15 16>; // second row WE
+    //         bindings = <&kp ESC>;
+    //         layers = <COLEMAKDH>;
+    //     };
+    //     combo_tab {
+    //         timeout-ms = <50>;
+    //         key-positions = <39 40>; // forth row XC in orto, ZX on regular
+    //         bindings = <&kp TAB>;
+    //         layers = <COLEMAKDH>;
+    //     };
+    //     combo_backspace {
+    //         timeout-ms = <50>;
+    //         key-positions = <22 23>; // second row IO
+    //         bindings = <&kp BSPC>;
+    //         layers = <COLEMAKDH>;
+    //     };
+    //     combo_enter {
+    //         timeout-ms = <50>;
+    //         key-positions = <45 46>;  // forth row ,.
+    //         bindings = <&kp ENTER>;
+    //         layers = <COLEMAKDH>;
+    //     };
+    // };
 
     // have combo layer
     // !WARNING: Can't use num as a normal layer because of this
