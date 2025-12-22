@@ -98,7 +98,7 @@
         };
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <39 40>; // forth row XC in orto, ZX on regular
+            key-positions = <41 42>; // forth row XC in orto, ZX on regular
             bindings = <&kp TAB>;
             layers = <COLEMAKDH>;
         };
@@ -110,7 +110,7 @@
         };
         combo_enter {
             timeout-ms = <50>;
-            key-positions = <45 46>;  // forth row ,.
+            key-positions = <48 49>;  // forth row ,.
             bindings = <&kp ENTER>;
             layers = <COLEMAKDH>;
         };
