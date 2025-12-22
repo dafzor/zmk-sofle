@@ -524,12 +524,12 @@ combos:
 - p: [15, 16]
   k: $$mdi:keyboard-esc$$
   l: [cmkdh]
-- p: [39, 40]
+- p: [41, 42]
   k: $$mdi:keyboard-tab$$
   l: [cmkdh]
 - p: [22, 23]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [cmkdh]
-- p: [45, 46]
+- p: [48, 49]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [cmkdh]
